@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    & img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #modulos {
+        color: white;
+        font-size: large;
+        align-self: center;
+
+
+        a {
+            padding-left: 20px;
+        }
+    }
+}
+
+section {
+    background-color: red;
+    padding: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#product {
+    background-color: purple;
+    padding: 20px 150px 20px 150px;
+    display: inline-grid;
+    justify-content: space-between;
+    text-align: center;
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    button{
+        color: black;
+        padding: 10px;
+        background-color: rgb(230, 230, 230);
+        border: 20px;
+        border-radius: 5px;
+    }
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 15px;
+
+}
