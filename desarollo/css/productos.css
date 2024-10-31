@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+body {}
+
 header {
     background-color: black;
     padding: 10px;
@@ -26,28 +28,60 @@ header {
     }
 }
 
-section {
-    background-color: red;
-    padding: 100px;
+.main-content{
+    padding: 50px;
+    background-color: rgb(227, 208, 208);
+}
 
+.mosaic {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 6, 1fr;
+    grid-template-rows: 3, 1fr;
 
+    grid-template-areas:
+        "item1 item1 item2 item2 item3 item3"
+        "item1 item1 item2 item2 item3 item3"
+        "item1 item1 item2 item2 item3 item3"
+        "item1 item1 item2 item2 item3 item3";
+}
+
+.mosaic__item {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    border: 5px solid skyblue;
+
+    img {
+        width: 50%;
+        height: 80%;
+        border-radius: 20px;
+    }
+}
+
+.mosaic__item--1 {
+    grid-area: item1;
+}
+
+.mosaic__item--2 {
+    grid-area: item2;
+}
+
+.mosaic__item--3 {
+    grid-area: item3;
 }
 
 #product {
-    background-color: purple;
-    padding: 20px 150px 20px 150px;
-    display: inline-grid;
-    justify-content: space-between;
     text-align: center;
+    padding: 20px;
 
     img {
         width: 150px;
         height: 150px;
     }
 
-    button{
+    button {
         color: black;
         padding: 10px;
         background-color: rgb(230, 230, 230);
